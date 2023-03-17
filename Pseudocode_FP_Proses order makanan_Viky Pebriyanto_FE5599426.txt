@@ -1,0 +1,25 @@
+PROGRAM Proses_order_makanan/minuman_via_online.
+
+START
+
+Display "list menu_makanan_atau_minuman"
+    IF "pilih_makanan"
+        print makanan
+    ELSE "pilih_minuman"
+        print minuman
+Read AND Write "jumlah_makanan" with string
+Read AND Write "jumlah_minuman" with string
+Read AND Write "konfirmasi_pesanan" with string
+Read AND Write "alamat_pengiriman" with string
+Write "ongkir" with number
+Read AND Write "total_harga" with number
+Calculate "jumlah_makanan + jumlah_minuman + total_harga + ongkir" FROM "menu_makanan_atau_minuman"
+Read AND Write "melakukan_pembayaran"
+Read AND Write "konfirmasi_pembayaran" with boolean
+    IF "pembayaran" payment SUCCESS
+        print "pembayaran sukses"
+    ELSE
+        GO TO LINE 16
+print "Pesanan di kirim ke alamat"
+
+END
